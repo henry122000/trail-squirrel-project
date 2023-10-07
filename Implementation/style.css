@@ -1,0 +1,126 @@
+/**
+Image Credit:
+Background: https://www.freepik.com/free-photo/beautiful-shot-high-white-hilltops-mountains-covered-fog_7629775.htm#query=mountain%20background&from_query=moutain%20background&position=3&from_view=search
+*/
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(21, 94, 122, 0.5), rgba(21, 94, 122, 0.5)), url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    min-height: 100vh;    
+    flex-direction: column;
+}
+
+.search_bar {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    backdrop-filter: blur(3px)  saturate(180%);
+}
+
+.search_bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 30px;
+    color:rgba(21, 94, 122, 0.5);
+    font-size: .4cm;
+    color:rgba(71, 114, 151);
+}
+
+::placeholder {
+    font-size: .4cm;
+    color:rgba(71, 114, 151);
+}
+
+.search_bar button img {
+    width: 25px;
+}
+
+.search_bar button {
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    background-color: rgba(71, 114, 151);
+    cursor: pointer;
+    margin-right: .1cm;
+}
+
+h1{
+    font-size: 1.5cm;
+    font-family: 'Hurricane', cursive;
+    color: darkslategrey;
+    padding-left: 20cm;
+}
+
+h2 {
+    color: darkslategrey;
+    font-family: cursive;
+    text-align: left;
+    padding-top: 8cm;
+}
+
+header {
+    font-size: 4cm;
+    font-family: 'Hurricane', cursive;
+    color: darkslategrey;
+    margin-left: 32%;
+    margin-top: 4%;
+}
+
+#hikeMap{
+    height: 500px;
+    width: 900px;
+    position: absolute;
+    margin-left: 7.5cm;
+    margin-top: 3cm;
+}
+
+/*implement css for .col in weather_forecast.js file*/
+
+.col {
+    float: left;
+    display: table;
+    position: relative;
+    text-align: center;
+    padding: .5cm;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-top: 20cm;
+    margin-left: 1.5cm;
+    margin-bottom: 3cm;
+  }
+
+
+footer{
+    text-align: center;
+    height: 20px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: relative;
+
+}
+
+.content-wrap{
+    margin-top: 0cm;
+}
+
+/* Clear floats after the columns */
+#hikeWeather::after {
+    content: "";
+    display: table;
+    clear: both;
+}

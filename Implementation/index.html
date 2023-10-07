@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trail Squirrel</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Hurricane&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <header>
+           Trail Squirrel
+        </header>
+        <!--Search Bar-->
+        <div class="search_bar">
+            <input type="text" placeholder="Search hiking trail name" id="searchBar">
+            <button type="submit" id="myBtn" onclick="javascript: displayWeather(); displayMapFromQuery();"><img src="images/search.png"></button>
+            <script>
+                var input = document.getElementById("searchBar");
+                input.addEventListener("keyup", function(event) {
+                  if (event.keyCode === 13) {
+                   event.preventDefault();
+                   document.getElementById("myBtn").click();
+                  }
+                });
+            </script>
+        </div>
+        <div >
+            <!--displayMapFromQuery()-->
+            <div id="hikeMap"></div>
+            <!--Hiking Trail Info-->
+            <div id="hikeReview"></div>  
+            <div id="hikeInfo"></div>
+            <!--Weather-->
+            <div id="hikeWeather" class="container"></div> 
+        </div>
+        <footer>
+            Created By Henry Dao. &copy; All rights reserved
+        </footer>       
+        <script src="main.js" /defer></script>
+        <script src="weather_forecast.js" /defer></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIiQ-J6wA3iayZ2mDlVhMn4mNdwWR148w&callback=initMap"></script>
+        <!--place, geocode, autocomplete -->
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIiQ-J6wA3iayZ2mDlVhMn4mNdwWR148w"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/geocode/json?place_id=ChIJeRpOeF67j4AR9ydy_PIzPuM&key=AIzaSyDwjgDs9LYpMawVbhR1p_QZoPblI7O8ijE"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyAIiQ-J6wA3iayZ2mDlVhMn4mNdwWR148w&libraries=places&callback=initMap"></script>
+    </body>
+</html>
